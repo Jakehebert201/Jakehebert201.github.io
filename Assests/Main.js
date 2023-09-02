@@ -2,8 +2,7 @@ import Decimal from "break_infinity.js";
 import { Generators } from "./Classes/Generators.js";
 import { Upgrades } from "./Classes/Upgrades.js";
 
-const Currency = new Decimal(10);
-Gen1 = new Gen1(0, 10, 0, 1,0);
+Gen1 = new Gen1(1, 10, 0, 1,0);
 Gen2 = new Generators(1, 100, 0, 1,0);
 Gen3 = new Generators(2, 1e+4, 0, 1,0);
 Gen4 = new Generators(3, 1e+6, 0, 1,0);
@@ -25,6 +24,7 @@ setInterval(gameTick, tickspeed);
 function gameTick(){
     AllGens.forEach(element => {
         element.GeneratorTick();
+        console.write(GameLogic.Currency)
     });
-    
+
 }
